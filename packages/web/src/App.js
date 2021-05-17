@@ -5,6 +5,8 @@ import Header from './components/Header';
 import useOnAuthStateChanged from './custom-hooks/onAuthStateChanged';
 import MainRouter from './Router';
 
+import './reset.scss'
+
 function App() {
     const auth = useSelector(store => store.auth);
     useOnAuthStateChanged();
