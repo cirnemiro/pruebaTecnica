@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import useOnAuthStateChanged from './custom-hooks/onAuthStateChanged';
+import MainRouter from './Router';
 
 function App() {
     const auth = useSelector(store => store.auth);
@@ -8,15 +11,11 @@ function App() {
 
     return (
         <>
-            {/* {auth.isAuthenticated && (
-                <>
-                    <Header />
-                    <SongModal />
-                </>
-            )} */}
+            <Header />
             <main className="main">
-                Main content
+                <MainRouter />
             </main>
+            <Footer />
         </>
     );
 }
