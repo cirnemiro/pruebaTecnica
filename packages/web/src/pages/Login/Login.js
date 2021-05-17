@@ -10,6 +10,8 @@ const Login = () => {
 
     const { isAuthenticated } = useSelector(authSelector)
 
+
+
     return (
         <>
             {
@@ -34,6 +36,9 @@ const Login = () => {
                             <input type="text" />
                             <label>Password</label>
                             <input type="password" />
+                            <button>
+                                Sign Up
+                            </button>
                         </form>
                     </div>
             }
