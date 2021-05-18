@@ -5,6 +5,7 @@ const UserRepo = new Repo('User');
 async function signUp(req, res, next) {
     const { uid, email } = req.user;
     const { body } = req;
+    const { username } = body
 
     try {
         const response = await UserRepo.findOne({ _id: uid });
@@ -15,7 +16,7 @@ async function signUp(req, res, next) {
         const user = await UserRepo.create({
             _id: uid,
             email: email,
-            ...body,
+            username: username,
         });
 
         if (user.data) return res.status(202).send(user);

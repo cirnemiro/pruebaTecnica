@@ -34,8 +34,8 @@ export function singInWithEmailAndPassword(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
 }
 
-export function singUpWithEmailAndPassword(email, password, username) {
-    return auth.createUserWithEmailAndPassword(email, password, username);
+export function singUpWithEmailAndPassword(email, password) {
+    return auth.createUserWithEmailAndPassword(email, password);
 }
 
 export function sendPasswordResetEmail(email) {

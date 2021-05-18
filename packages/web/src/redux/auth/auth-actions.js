@@ -80,12 +80,11 @@ export function signUpWithEmailRequest(userInfo) {
     return async function signUpThunk(dispatch) {
         dispatch(signUpRequest());
         try {
-            const { email, password, username } = userInfo;
+            const { email, password, ...body } = userInfo;
 
             const { user } = await auth.singUpWithEmailAndPassword(
                 email,
                 password,
-                username,
             );
 
             const authorization = {
