@@ -1,4 +1,4 @@
-import Repo from '../repositories/index.js';
+import Repo from '../repositories/RepositoryModel.js';
 
 const UserRepo = new Repo('User');
 

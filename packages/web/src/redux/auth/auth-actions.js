@@ -1,5 +1,5 @@
 import * as AuthTypes from './auth-types';
-// import api from '../../api';
+import api from '../../api';
 import * as auth from '../../services/auth';
 import { resetStoreAndLogOut } from '../root-reducer';
 
@@ -80,11 +80,12 @@ export function signUpWithEmailRequest(userInfo) {
     return async function signUpThunk(dispatch) {
         dispatch(signUpRequest());
         try {
-            const { email, password, ...body } = userInfo;
+            const { email, password, username } = userInfo;
 
             const { user } = await auth.singUpWithEmailAndPassword(
                 email,
                 password,
+                username,
             );
 
             const authorization = {
