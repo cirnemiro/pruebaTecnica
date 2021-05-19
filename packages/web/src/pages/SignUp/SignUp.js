@@ -22,9 +22,9 @@ const SignUp = () => {
 
         dispatch(
             signUpWithEmailRequest({
-                username,
                 email,
                 password,
+                username,
             })
         )
 

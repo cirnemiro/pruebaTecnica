@@ -34,6 +34,6 @@ const GiffSchema = mongoose.Schema({
     ],
 });
 
-const Giff = mongoose.model('song', GiffSchema);
+const Giff = mongoose.model('giff', GiffSchema);
 
 export default Giff;
